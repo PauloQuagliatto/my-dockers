@@ -1,14 +1,12 @@
 services:
-
   db:
     container_name: mysql_database
     restart: unless-stopped
     image: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: 1234password_root
+      MYSQL_ROOT_PASSWORD: 1234
       MYSQL_DATABASE: work
     ports:
-      - 3316:3306
+      - 3306:3306
     volumes:
       - ./storage:/var/lib/mysql
-
